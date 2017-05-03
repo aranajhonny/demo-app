@@ -2,6 +2,8 @@
 
 # Example app with aphrodite
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/aranajhonny/demo-app.svg)](https://greenkeeper.io/)
+
 ## How to use
 
 Download the example [or clone the repo](https://github.com/zeit/next.js):
