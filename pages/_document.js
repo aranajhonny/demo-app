@@ -4,15 +4,14 @@ import { StyleSheetServer } from 'aphrodite'
 export default class MyDocument extends Document {
   static async getInitialProps ({ renderPage }) {
     const {html, css} = StyleSheetServer.renderStatic(() => renderPage())
-    const ids = css.renderedClassNames
-    return { ...html, css, ids }
+    return { ...html, css}
   }
 
   constructor (props) {
     super(props)
-    const { __NEXT_DATA__, ids } = props
-    if (ids) {
-      __NEXT_DATA__.ids = this.props.ids
+    const { __NEXT_DATA__, css } = props
+   if (css && css.renderedClassNames) {
+      __NEXT_DATA__.ids = css.renderedClassNames
     }
   }
 
