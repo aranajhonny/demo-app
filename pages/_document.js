@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
   constructor (props) {
     super(props)
     const { __NEXT_DATA__, css } = props
-   if (css && css.renderedClassNames) {
+    if (css && css.renderedClassNames) {
       __NEXT_DATA__.ids = css.renderedClassNames
     }
   }
