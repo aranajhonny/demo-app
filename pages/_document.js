@@ -4,7 +4,7 @@ import { StyleSheetServer } from 'aphrodite'
 export default class MyDocument extends Document {
   static async getInitialProps ({ renderPage }) {
     const {html, css} = StyleSheetServer.renderStatic(() => renderPage())
-    return { ...html, css}
+    return {...html, css}
   }
 
   constructor (props) {
